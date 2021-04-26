@@ -1,32 +1,61 @@
-function add () {
-	
+function add (a,b) {
+	const add = a + b;
+	return add;
 }
 
-function subtract () {
-	
+add = add(2,3);
+console.log("Add: " + add);
+
+function subtract (a,b) {
+	const subtract = a - b;
+	return subtract;
 }
 
-function sum () {
-	
+subtract = subtract(2,3);
+console.log("Subtract: " + subtract);
+
+function sum (array) {
+	let sum = 0;
+	array.forEach (function(number){
+		sum = number + sum;
+	});
+	return sum
 }
 
-function multiply () {
-	
+let array = [2,4,6,8];
+sum = sum(array);
+console.log("Sum: " + sum);
+
+function multiply (a,b) {
+	const multiply = a * b;
+	return multiply;
 }
 
-function power() {
-	
+multiply = multiply(6,8);
+console.log("Multiply: " + multiply);
+
+function power(a,b) {
+	const power = Math.pow(a,b);
+	return power;
 }
 
-function factorial() {
-	
+function factorial(a) {
+	let afac = a - 1;
+	while (afac > 0) {
+		a = a * afac;
+		afac--;
+	}
+	return a;
 }
 
-module.exports = {
-	add,
-	subtract,
-	sum,
-	multiply,
-    power,
-	factorial
-}
+factorial = factorial(5);
+console.log("Factorial: " + factorial);
+
+// module.exports = {
+// 	add,
+// 	subtract,
+// 	sum,
+// 	multiply,
+//     power,
+// 	factorial
+// }
